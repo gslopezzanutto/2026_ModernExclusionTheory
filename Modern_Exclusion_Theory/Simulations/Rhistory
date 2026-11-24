@@ -1,0 +1,512 @@
+ggplot(data = NFDs,
+aes(y = (c_ij - theo_c_ij)/c_ij,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(a)")+
+labs(x = " ",
+y = "Δ(A-N)/N")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (var_c_ij - theo_var_c_ij)/var_c_ij,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+# ylim(0,2)+
+ggtitle("(b)")+
+labs(x = " ",
+y = " ")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (theo_r_i - r_i)/r_i,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ylim(0,1.5)+
+ggtitle("(c)")+
+labs(x = " ",
+y = "Δ(A-N)/N")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (theo_var_r_i - var_r_i)/var_r_i,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(d)")+
+labs(x = " ",
+y = " ")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (theo_eta_i - eta_i)/eta_i,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(e)")+
+labs(x = "Dynamics axis",
+y = " ")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (theo_var_eta_i - var_eta_i)/var_eta_i,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(f)")+
+labs(x = "Dynamics axis",
+y = " ")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (theo_eta_i - eta_i)/eta_i,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(e)")+
+labs(x = "Dynamics axis",
+y = "Δ(A-N)/N")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (theo_var_r_i - var_r_i)/var_r_i,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(d)")+
+labs(x = " ",
+y = " ")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (theo_r_i - r_i)/r_i,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ylim(0,1.5)+
+ggtitle("(c)")+
+labs(x = " ",
+y = "Δ(A-N)/N")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (c_ij - theo_c_ij)/c_ij,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(a)")+
+labs(x = " ",
+y = "Δ(A-N)/N")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (var_c_ij - theo_var_c_ij)/var_c_ij,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+# ylim(0,2)+
+ggtitle("(b)")+
+labs(x = " ",
+y = " ")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (theo_ND - mean_ND)/mean_ND,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(a) Niche differences")+
+labs(x = " ",
+y = "Δ(A-N)/N")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (theo_FD - mean_FD)/mean_FD,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(c) Fitness differences")+
+labs(x = " ",
+y = "Δ(A-N)/N")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (theo_var_ND - var_ND)/var_ND,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(b) var(ND)")+
+labs(x = " ",
+y = " ")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (theo_var_FD - var_FD)/var_FD,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(d) var(FD)")+
+labs(x = " ",
+y = " ")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (theo_cov_NFD - cov_NFD)/cov_NFD,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(e) cov(ND,FD)")+
+# ylim(-0.5,3)+
+labs(x = "Dynamics axis",
+y = "Δ(A-N)/N")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (theo_cor_NFD - cor_NFD)/cor_NFD,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(f) cor(ND,FD)")+
+# ylim(-0.5,1)+
+labs(x = " ",
+y = "Δ(A-N)/N")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (theo_cor_NFD - cor_NFD)/cor_NFD,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(f) cor(ND,FD)")+
+# ylim(-0.5,1)+
+labs(x = "Dynamics axis",
+y = " ")+
+theme_bw()
+ggplot(data = NFDs,
+aes(y = (c_ij - theo_c_ij)/c_ij,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(a)")+
+labs(x = " ",
+y = "Δ(A-N)/N")+
+theme_bw()+
+theme(legend.position = "none",
+axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(y = (c_ij - theo_c_ij)/c_ij,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(a)")+
+labs(x = " ",
+y = "Δ(A-N)/N")+
+theme_bw()+
+theme(legend.position = "none",
+axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(y = (var_c_ij - theo_var_c_ij)/var_c_ij,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+# ylim(0,2)+
+ggtitle("(b)")+
+labs(x = " ",
+y = " ")+
+theme_bw()+
+theme(legend.position = "none",
+axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(y = (theo_r_i - r_i)/r_i,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ylim(0,1.5)+
+ggtitle("(c)")+
+labs(x = " ",
+y = "Δ(A-N)/N")+
+theme_bw()+
+theme(legend.position = "none",
+axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(y = (theo_var_r_i - var_r_i)/var_r_i,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(d)")+
+labs(x = " ",
+y = " ")+
+theme_bw()+
+theme(legend.position = "none",
+axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(y = (theo_eta_i - eta_i)/eta_i,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(e)")+
+labs(x = "Dynamics axis",
+y = "Δ(A-N)/N")+
+theme_bw()+
+theme(legend.position = "none",
+axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(y = (theo_var_eta_i - var_eta_i)/var_eta_i,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(f)")+
+labs(x = "Dynamics axis",
+y = " ")+
+theme_bw()+
+theme(legend.position = "none",
+axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(y = (theo_ND - mean_ND)/mean_ND,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(a) Niche differences")+
+labs(x = " ",
+y = "Δ(A-N)/N")+
+theme_bw()+
+theme(legend.position = "none",
+axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(y = (theo_var_ND - var_ND)/var_ND,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(b) var(ND)")+
+labs(x = " ",
+y = " ")+
+theme_bw()+
+theme(legend.position = "none",
+axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(y = (theo_FD - mean_FD)/mean_FD,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(c) Fitness differences")+
+labs(x = " ",
+y = "Δ(A-N)/N")+
+theme_bw()+
+theme(legend.position = "none",
+axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(y = (theo_var_FD - var_FD)/var_FD,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(d) var(FD)")+
+labs(x = " ",
+y = " ")+
+theme_bw()+
+theme(legend.position = "none",
+axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(y = (theo_cov_NFD - cov_NFD)/cov_NFD,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(e) cov(ND,FD)")+
+# ylim(-0.5,3)+
+labs(x = "Dynamics axis",
+y = "Δ(A-N)/N")+
+theme_bw()+
+theme(legend.position = "none",
+axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(y = (theo_cor_NFD - cor_NFD)/cor_NFD,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_vline(xintercept = 0, linetype = 1)+
+geom_vline(xintercept = 1, linetype = 2)+
+geom_hline(yintercept = 0, colour = "red")+
+stat_summary(geom = "point", fun = "mean", colour = "black", shape = 1)+
+ggtitle("(f) cor(ND,FD)")+
+# ylim(-0.5,1)+
+labs(x = "Dynamics axis",
+y = " ")+
+theme_bw()+
+theme(legend.position = "none",
+axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+plot(BH_res)
+ggplot(data = NFDs,
+aes(y = pvalue,
+x = (sqrt(n*sigma**2)-((1-lambda)/2)) / ((sqrt(2)/(1+rho))-((1-lambda)/2))))+
+geom_point()+
+geom_hline(yintercept = 0.05, colour = "red")+
+# ggtitle("multivariate distribution")+
+labs(x = "Dynamics axis",
+y = "p-value")+
+theme_bw()+
+theme(axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(y = pvalue,
+x = lambda))+
+geom_point()+
+geom_hline(yintercept = 0.05, colour = "red")+
+# ggtitle("multivariate distribution")+
+labs(x = "Dynamics axis",
+y = "p-value")+
+theme_bw()+
+theme(axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(x = lambda))+
+geom_point(aes(y = theo_ND), shape = 16, colour = "blue", size = 1)+
+geom_point(aes(y = theo_FD), shape = 15, colour = "red", size = 1)+
+geom_smooth(aes(y = theo_ND), method = "lm", se = FALSE, colour = "blue")+
+geom_smooth(aes(y = theo_FD), method = "lm", se = FALSE, colour = "red")+
+ggtitle("A",
+subtitle = "Theoretical")+
+labs(y = "<ND>, <FD>",
+x = "Mean interaction strength (λ)")+
+ylim(0.725,0.84)+
+theme_bw()+
+theme(axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(x = lambda))+
+geom_point(aes(y = mean_ND), shape = 1, colour = "blue", size = 1)+
+geom_point(aes(y = mean_FD), shape = 0, colour = "red", size = 1)+
+geom_smooth(aes(y = mean_ND), method = "lm", se = FALSE, colour = "blue")+
+geom_smooth(aes(y = mean_FD), method = "lm", se = FALSE, colour = "red")+
+ggtitle("",
+subtitle = "Numerical")+
+labs(y = " ",
+x = "Mean interaction strength (λ)")+
+ylim(0.725,0.84)+
+theme_bw()+
+theme(axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(x = rho))+
+geom_point(aes(y = theo_var_ND/((sigma**2/n)*(1-lambda)**2)), shape = 16, colour = "blue", size = 1)+
+geom_point(aes(y = theo_var_FD/((sigma**2/n)*(1-lambda)**2)), shape = 15, colour = "red", size = 1)+
+geom_smooth(aes(y = theo_var_ND/((sigma**2/n)*(1-lambda)**2)), method = "lm", se = FALSE, colour = "blue")+
+geom_smooth(aes(y = theo_var_FD/((sigma**2/n)*(1-lambda)**2)), method = "lm", se = FALSE, colour = "red")+
+ylim(0,3.5)+
+ggtitle("B",
+subtitle = "Theoretical")+
+labs(y = "var(ND), var(FD)",
+x = "Lambda")+
+theme_bw()+
+theme(axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(x = rho))+
+geom_point(aes(y = var_ND/(sigma**2/n*(1-lambda)**2)), shape = 1, colour = "blue", size = 1)+
+geom_point(aes(y = var_FD/(sigma**2/n*(1-lambda)**2)), shape = 0, colour = "red", size = 1)+
+geom_smooth(aes(y = var_ND/(sigma**2/n*(1-lambda)**2)), method = "lm", se = FALSE, colour = "blue")+
+geom_smooth(aes(y = var_FD/(sigma**2/n*(1-lambda)**2)), method = "lm", se = FALSE, colour = "red")+
+ylim(0,3.5)+
+ggtitle("",
+subtitle = "Numerical")+
+labs(y = " ",
+x = "Species correlation (ρ)")+
+theme_bw()+
+theme(axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(x = lambda))+
+geom_point(aes(y = cov_NFD/(sigma**2/n*(1-lambda)**2)), shape = 1, colour = "plum2", size = 1)+
+geom_point(aes(y = theo_cov_NFD/(sigma**2/(n*(1+lambda)**2))), shape = 16, colour = "purple", size = 1)+
+geom_smooth(aes(y = cov_NFD/(sigma**2/n*(1-lambda)**2)), method = "lm", se = FALSE, colour = "plum2")+
+geom_smooth(aes(y = theo_cov_NFD/(sigma**2/n*(1-lambda)**2)), method = "lm", se = FALSE, colour = "purple")+
+ylim(0,2)+
+ggtitle("C",
+subtitle = "Theoretical and Numerical")+
+labs(y = "cov(ND,FD)",
+x = "Mean interaction strength (λ)")+
+theme_bw()+
+theme(axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(x = lambda))+
+geom_point(aes(y = cor_NFD), shape = 1, colour = "plum2", size = 1)+
+geom_point(aes(y = theo_cor_NFD), shape = 16, colour = "purple", size = 1)+
+geom_smooth(aes(y = cor_NFD), method = "lm", se = FALSE, colour = "plum2")+
+geom_smooth(aes(y = theo_cor_NFD), method = "lm", se = FALSE, colour = "purple")+
+# ylim(0,2)+
+ggtitle("D",
+subtitle = "Theoretical and Numerical")+
+labs(y = "cor(ND,FD)",
+x = "Mean interaction strength (λ)")+
+theme_bw()+
+theme(axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
+ggplot(data = NFDs,
+aes(x = rho))+
+geom_point(aes(y = cor_NFD), shape = 1, colour = "plum2", size = 1)+
+geom_point(aes(y = theo_cor_NFD), shape = 16, colour = "purple", size = 1)+
+geom_smooth(aes(y = cor_NFD), method = "lm", se = FALSE, colour = "plum2")+
+geom_smooth(aes(y = theo_cor_NFD), method = "lm", se = FALSE, colour = "purple")+
+# ylim(0,2)+
+ggtitle("D",
+subtitle = "Theoretical and Numerical")+
+labs(y = "cor(ND,FD)",
+x = "Mean interaction strength (λ)")+
+theme_bw()+
+theme(axis.text = element_text(size = 12),
+axis.title = element_text(size = 14))
